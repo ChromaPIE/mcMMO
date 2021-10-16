@@ -49,3 +49,10 @@ jobs:
     # 4. Build via Maven 
     - name: Build via Maven
       run: mvn verify -B --file pom.xml
+      
+    # 5. Hehe, boy
+    - name: Upload artifacts to Github Actions
+      uses: actions/upload-artifact@v2
+      with:
+        name: Artifacts
+        path: build/libs
